@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package helloworld;
+option go_package = "github.com/geektime007/king/examples/helloworld/proto";
+//import "google/api/annotations.proto";
+
+message HelloWorldRequest {
+}
+
+message HelloWorldResponse {
+    string msg = 1;
+}
+
+service HelloWorld {
+    rpc HelloWorld(HelloWorldRequest) returns (HelloWorldResponse){}
+}
+
+
